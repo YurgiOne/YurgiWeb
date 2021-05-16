@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using YurgiOne.Services;
 using YurgiOne.ViewModels;
 
@@ -13,6 +12,7 @@ namespace YurgiOne.Controllers
         {
             _mailService = mailService;
         }
+
         public IActionResult Index()
         {
             return View();
@@ -36,12 +36,8 @@ namespace YurgiOne.Controllers
                 ViewBag.UserMessage = "Mail sent";
                 ModelState.Clear();
             }
-            else
-            {
 
-            }
             return View();
-
         }
 
         [HttpGet("about")]
