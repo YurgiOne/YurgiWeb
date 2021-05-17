@@ -8,18 +8,17 @@
 
 </head>
 <body>
-<header class="container-fluid">
-    <nav class="navbar navbar-expand-sm navbar-light bg-light navbar-center">
-        <a class="navbar-brand" asp-controller="App" asp-action="Index"><i class="fa fa-car"></i> Yurgi One </a>
+<header class="container-fluid" id="headerContainer">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light navbar-center ">
+        @*<a class="navbar-brand col-md-4 offset-md-4" asp-controller="App" asp-action="Index"><i class="fa fa-car"></i> Yurgi One </a>*@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
             <div class="navbar-nav" id="menuItems">
                 <a class="nav-item nav-link active" asp-controller="App" asp-action="Index">
                     <img src="~/img/home_btn.gif"/>
                 </a>
-
                 <a class="nav-item nav-link" asp-controller="App" asp-action="About">
                     <img src="~/img/about_btn.gif"/>
                 </a>
@@ -31,12 +30,13 @@
         </div>
     </nav>
 </header>
-
+@*TODO: put something normal instead of this*@
+<br/>
 <section>
     @* take the body of cshtml and inject it here *@
     @RenderBody()
 </section>
-<footer class="text-center"> Footer </footer>
+
 <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/index.js"></script>

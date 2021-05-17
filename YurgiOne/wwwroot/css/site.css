@@ -9,6 +9,7 @@ body {
     padding: 0;
 }
 
+#navigationContainer { margin-bottom: 0px; }
 
 .clearfloat {
     clear: both;
@@ -17,14 +18,12 @@ body {
     line-height: 0px;
 }
 
-.navbar-nav .nav-link {
-     padding-bottom: 0px;
-}
+.navbar-nav .nav-link { padding-bottom: 0px; }
 
 .navbar-brand {
-    border-bottom: 1px solid lightgray;
-    margin-right: 0px;
+    margin-bottom: 50px;
     margin-left: 0px;
+    margin-right: 0px;
 }
 
 #navbarNavAltMarkup {

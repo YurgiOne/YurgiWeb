@@ -32,7 +32,7 @@ namespace YurgiOne.Controllers
             {
                 ViewBag.Title = "Contact";
 
-                _mailService.SendMessage("syurgi@asd.com", contactViewModel.Subject, contactViewModel.Message);
+                _mailService.SendMessage(contactViewModel.Name, contactViewModel.Email, contactViewModel.Subject, contactViewModel.Message);
                 ViewBag.UserMessage = "Mail sent";
                 ModelState.Clear();
             }

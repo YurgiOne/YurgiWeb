@@ -1,20 +1,23 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace YurgiOne.Services
 {
     public class NullMailService : INullMailService
     {
+        private readonly IWebHostEnvironment _env;
         private readonly ILogger<NullMailService> _logger;
 
-        public NullMailService(ILogger<NullMailService> logger)
+        public NullMailService(ILogger<NullMailService> logger, IWebHostEnvironment env)
         {
             _logger = logger;
+            _env = env;
         }
 
-        public void SendMessage(string to, string subject, string body)
+
+        public void SendMessage(string name, string email, string subject, string body)
         {
-            //Log the message
-            _logger.LogInformation($"TO:{to} \n subject: {subject} \n body: {body}");
+            //TODO: implement send message
         }
     }
 }

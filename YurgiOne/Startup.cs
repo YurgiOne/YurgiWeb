@@ -35,10 +35,10 @@ namespace YurgiOne
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("Fallback", "{controller}/{action}/{id?}",
-                                             new
-                                             {
-                                                 controller = "App", action = "Index"
-                                             });
+                    new
+                    {
+                        controller = "App", action = "Index"
+                    });
             });
         }
     }
